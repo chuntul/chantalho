@@ -1,0 +1,24 @@
+{
+  "name": "chuntul.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "effects.js",
+  "dependencies": {
+    "jquery-scrollify": "^1.0.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chuntul/chuntul.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chuntul/chuntul.github.io/issues"
+  },
+  "homepage": "https://github.com/chuntul/chuntul.github.io#readme"
+}
