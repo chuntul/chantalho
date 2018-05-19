@@ -1,6 +1,6 @@
 html, body {
     background:white;
-    color:white;
+    color:black;
     font-family: Arial;
     margin:0px;
     max-width: 100%;
@@ -8,7 +8,7 @@ html, body {
 }
 
 a {
-    color:white;
+    color:black;
 }
 
 ::-webkit-scrollbar {
@@ -43,15 +43,15 @@ background: #000;
 }
 
 .section:nth-child(3) {
-    background:rgb(223, 115, 115);
+    background:rgb(229, 130, 130);
 }
 
 .section:nth-child(4) {
-    background:rgb(241, 204, 82);
+    background:rgb(247, 210, 90);
 }
 
 .section:nth-child(5) {
-    background:rgb(107, 161, 241);
+    background:rgb(132, 178, 243);
 }
 
 .section:nth-child(6) {
@@ -63,10 +63,11 @@ background: #000;
     font-family: Arial;
     font-size:60px;
     margin-left:10%;
+    color:white;
 }
 
 
-img{
+img {
     width: 40vw;
     border: 2px solid white;
     opacity:0.9;
@@ -80,14 +81,39 @@ img{
     width:80%;
     margin-left:10%;
     font-size:20px;
-    line-height:28px;
+    line-height:30px;
     display:inline-block;
-    font-family:'Abel', sans-serif;
+    font-family:'Tajawal', sans-serif;
+}
+
+#exp-pharmacodb h1 {
+    color:black;
+}
+
+#about .description {
+    color:white;
+}
+
+#about .description a {
+    color:white;
+    border-bottom:1px solid white;
+}
+#exp-ePlant .description {
+    color:white;
+}
+
+#exp-ePlant .description a {
+    color:white;
+    border-bottom:1px solid white;
+}
+
+#exp-pharmacodb .description img {
+    border:2px solid black;
 }
 
 .description a {
     text-decoration:none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
     padding-bottom: 1px;
     text-transform: uppercase;
     font-size:20px;
@@ -121,7 +147,7 @@ img{
 }
 
 #sidelinks a {
-    color:white;
+    color:black;
     text-decoration:none;
     display:block;
     margin:0px 0px 30px 0px;
@@ -135,12 +161,12 @@ img{
 }
 
 #sidelinks a:hover {
-    border-bottom:2px solid white;
+    border-bottom:2px solid black;
     transition: border .3s ease-out;
 }
 
 .active {
-    border-bottom:2px solid white;
+    border-bottom:2px solid black;
     transition: border .3s ease-out;
 }
 
@@ -151,9 +177,15 @@ img{
     width:100%;
     height:40px;
     background:white;
-    opacity:0.4;
+    opacity:0.5;
     text-align:center;
     padding-top:20px;
+    transition: .3s ease-out;
+}
+
+#footer:hover {
+    opacity:0.8;
+    transition: .3s ease-out;
 }
 
 #footer a {
@@ -171,6 +203,7 @@ img{
     border-bottom:1px solid #000;
     transition: border .3s ease-out;
 }
+
 
 
 
