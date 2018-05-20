@@ -3,7 +3,12 @@
     <head>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src="effects.js"></script>
+        <script src="d3/barPlot.js"></script>
+        <script src="d3/waterfallPlot.js"></script>
+        <script src="d3/venn.js"></script>
+        <script src="d3/pie.js"></script>
         <script src="node_modules/jquery-scrollify/jquery.scrollify.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Abel|Quicksand|Tajawal" rel="stylesheet">
         <script>
@@ -80,6 +85,58 @@
 
         <div id="projects-d3" class="section">
             <h1>d3.js Plots</h1>
+            
+                <div id="plot-container">
+                    <div id="horizBarPlot" class="d3-half-container"></div>
+                    <div id="vertBarPlot" class="d3-half-container"></div>
+                    <div id="caption">
+                        <a href="http://github.com/chuntul/d3-plots">Code</a>
+                        Simple bar plots with hover for each bar. 
+                    </div>
+                    <div id="piePlot" class="d3-container"></div>
+                    <div id="caption">
+                        <a href="http://github.com/chuntul/d3-plots">Code</a>
+                        A donut plot with a legend. 
+                    </div>
+                    <div id="waterfallPlot" class="d3-container"></div>
+                    <div id="caption">
+                        <a href="http://github.com/chuntul/d3-plots">Code</a>
+                        A waterfall plot, sorted by decreasing number.
+                    </div>
+                    <div id="venn" class="d3-container"></div>
+                    <div id="caption">
+                        <a href="http://github.com/chuntul/d3-plots">Code</a>
+                        An UpSet plot, sorted by decreasing number.
+                    </div>
+                    <script>
+                        //setting up some data
+                        var names = ["set1", "set2", "set3", "set4", "set5", "set6"]
+                        var nums = [12,38,10,20,61,18]
+
+                        //call the function to make a bar plot
+                        makeHorizBarPlot(names,nums)
+                        makeVertBarPlot(names,nums)
+
+                        var pnames = ["set1", "set2", "set3", "set4", "set5", "set6"]
+                        var pnums = [12,38,10,20,61,18]
+                        makePie(pnames, pnums)
+
+                        var wnames = ["set1", "set2", "set3", "set4", "set5", "set6", "set7", "set8", "set9", "set10"]
+                        var wnums = [12,38,7,-20,-61,-18, 25, -30, 50, 20]
+                        makeWaterfall(wnames, wnums)
+
+                        var sets = ["set1", "set2", "set3", "set4"]
+                        var items = [
+                                        ["a","b","c","d"],
+                                        ["a","b","c","d", "e", "f"],
+                                        ["a","b","g", "h", "i"],
+                                        ["a","i", "j","c","d"],
+                                        // ["a","c","d", "e", "f", "n"]
+                                    ]
+                        makeVenn(sets,items)
+                    </script>
+                </div>
+         
         </div>
 
         
