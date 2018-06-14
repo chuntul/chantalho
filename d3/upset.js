@@ -17,82 +17,31 @@ function findIntersection(set1, set2) {
     })
 }
 
-// returns coordinates for drawing the intersections
-function intersection(x0, y0, r0, x1, y1, r1) {
-      var a, dx, dy, d, h, rx, ry;
-      var x2, y2;
-
-      /* dx and dy are the vertical and horizontal distances between
-       * the circle centers.
-       */
-      dx = x1 - x0;
-      dy = y1 - y0;
-
-      /* Determine the straight-line distance between the centers. */
-      d = Math.sqrt((dy * dy) + (dx * dx));
-
-      /* Check for solvability. */
-      if (d > (r0 + r1)) {
-        /* no solution. circles do not intersect. */
-        return false;
-      }
-      if (d < Math.abs(r0 - r1)) {
-        /* no solution. one circle is contained in the other */
-        return false;
-      }
-
-      /* 'point 2' is the point where the line through the circle
-       * intersection points crosses the line between the circle
-       * centers.
-       */
-
-      /* Determine the distance from point 0 to point 2. */
-      a = ((r0 * r0) - (r1 * r1) + (d * d)) / (2.0 * d);
-
-      /* Determine the coordinates of point 2. */
-      x2 = x0 + (dx * a / d);
-      y2 = y0 + (dy * a / d);
-
-      /* Determine the distance from point 2 to either of the
-       * intersection points.
-       */
-      h = Math.sqrt((r0 * r0) - (a * a));
-
-      /* Now determine the offsets of the intersection points from
-       * point 2.
-       */
-      rx = -dy * (h / d);
-      ry = dx * (h / d);
-
-      /* Determine the absolute intersection points. */
-      var xi = x2 + rx;
-      var xi_prime = x2 - rx;
-      var yi = y2 + ry;
-      var yi_prime = y2 - ry;
-
-      return [xi, xi_prime, yi, yi_prime];
-
-}
-
 //for the difference of arrays - particularly in the intersections and middles
 //does not mutate any of the arrays
 Array.prototype.diff = function(a) {
     return this.filter(function(i) {return a.indexOf(i) < 0;});
 };
 
-//for replacing underscores in tissue names
-String.prototype.replaceAll = String.prototype.replaceAll || function(s, r) {
-  return this.replace(new RegExp(s, 'g'), r);
-};
+function helperUpset(start, end, numSets, names, data) {
+  if (end == numSets) {
+    return data
+  }
+  else {
+    var intSet = {
+      "set": data[data.length-1].set + end.toString(),
+      "names": findIntersection(data[data.length-2].names, names[end])
+    }
+    data.push(intSet)
+    return helperUpset(start, end+1, numSets, names, data)
+  }
+}
 
 
-
-
-function makeVenn(sets, names) { // names: [[],[]]
+function makeUpset(sets, names) { // names: [[],[]]
   //number of circles to make
   var numCircles = sets.length
   var numSets = sets.length
-
 
   //position and dimensions
   var margin = {
@@ -117,11 +66,6 @@ function makeVenn(sets, names) { // names: [[],[]]
                 "translate(" + margin.left + "," + margin.top + ")")
       .attr("fill", "white");
 
-
- 
-
-
-
   // graph title
   var graphTitle = svg.append("text")
     .attr("text-anchor", "middle")
@@ -129,9 +73,6 @@ function makeVenn(sets, names) { // names: [[],[]]
     .style("font-size", "20px")
     .attr("transform", "translate("+ (width/2) +","+ -20 +")")
     .text("An UpSet plot");
-
-
-  
 
      // make a group for the upset circle intersection things
   var upsetCircles = svg.append("g")
@@ -146,49 +87,42 @@ height = 400;
 
 // computes intersections UNMANUALLY! goes up to  5 sets
 var data2 = []
-for (var i = 0; i < numSets; i++) {
-  for (var j = i + 1; j < numSets; j++) {
-    var temp = {}
-    temp["set"] = i.toString() + j.toString()
-    temp["names"] = findIntersection(names[i], names[j])
-    data2.push(temp)
-    for (var k = j + 1; k < numSets; k++) {
-      var temp = {}
-      temp["set"] = i.toString() + j.toString() + k.toString()
-      temp["names"] = findIntersection(findIntersection(names[i], names[j]), names[k])
-      data2.push(temp)
-      for (var l = k + 1; l < numSets; l++) {
-        var temp = {}
-        temp["set"] = i.toString() + j.toString() + k.toString() + l.toString()
-        temp["names"] = findIntersection(findIntersection(names[i], names[j]), findIntersection(names[k], names[l]))
-        data2.push(temp)
-        for (var m = l + 1; m < numSets; m++) {
-          var temp = {}
-          temp["set"] = i.toString() + j.toString() + k.toString() + l.toString() + m.toString()
-          temp["names"] = findIntersection((findIntersection(names[i], names[j]), findIntersection(names[k], names[l])), names[m])
-          data2.push(temp)
-        }
+  
+  for (var i = 0; i < numSets; i++) {
+    var intSet = {
+      "set": i.toString(),
+      "names": names[i]
+    }
+    data2.push(intSet)
+
+    for (var j = i + 1; j < numSets; j++) {
+      var intSet2 = {
+        "set": i.toString() + j.toString(),
+        "names": findIntersection(names[i], names[j])
       }
+      data2.push(intSet2)
+      helperUpset(i, j+1, numSets, names, data2)
+      
+    }
+    
+  }
+
+
+  // makes sure data is unique
+  var unique = []
+  var newData = []
+  for (var i = 0; i < data2.length; i++) {
+    if (unique.indexOf(data2[i].set) == -1) {
+      unique.push(data2[i].set)
+      newData.push(data2[i])
     }
   }
-}
 
-// makes sure data is unique
-var unique = []
-var newData = []
-for (var i = 0; i < data2.length; i++) {
-  if (unique.indexOf(data2[i].set) == -1) {
-    unique.push(data2[i].set)
-    newData.push(data2[i])
-  }
-}
-
-var data = newData
+  var data = newData
 
 // makes JSON objects for easy data parsing
 // also makes dataset labels
 for (var i = 0; i < numSets; i++) {
-  data.push({"set": i.toString(), "names": names[i]})
 
   upsetCircles.append("text")
     .attr("dx", -20)

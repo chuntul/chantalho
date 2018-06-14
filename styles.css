@@ -43,19 +43,19 @@ background: #000;
 }
 
 .section:nth-child(3) {
-    background:rgb(229, 130, 130);
+    background:rgb(255, 182, 182);
 }
 
 .section:nth-child(4) {
-    background:rgb(247, 210, 90);
+    background:rgb(252, 213, 108);
 }
 
 .section:nth-child(5) {
-    background:rgb(132, 178, 243);
+    background:rgb(158, 193, 241);
 }
 
 .section:nth-child(6) {
-    background:rgb(231, 159, 64);
+    background:rgb(240, 179, 109);
 }
 
 
@@ -158,8 +158,8 @@ img {
     padding:0px;
     text-align:right;
     text-transform:lowercase;
-    font-size:20px;
-    font-family:'Abel', sans-serif;
+    font-size:15px;
+    font-family:Arial;
     transition: border .3s ease-out;
     
 }
@@ -245,7 +245,7 @@ img {
     width:100%;
     height:40px;
     background:white;
-    opacity:0.7;
+    opacity:0.9;
     text-align:center;
     padding-top:20px;
     transition: .3s ease-out;

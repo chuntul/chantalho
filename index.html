@@ -5,7 +5,7 @@
         <script src="effects.js"></script>
         <script src="d3/barPlot.js"></script>
         <script src="d3/waterfallPlot.js"></script>
-        <script src="d3/venn.js"></script>
+        <script src="d3/upset.js"></script>
         <script src="d3/pie.js"></script>
         <script src="node_modules/jquery-scrollify/jquery.scrollify.js"></script>
         <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -41,12 +41,12 @@
             <h1>Hi, I'm Chantal Ho.</h1>
             <div class="description">
                 <img src="me.jpg"><p></p>
-                3rd year undergraduate bioinformatics student at the University of Toronto.
+                4th year undergraduate bioinformatics student at the University of Toronto.
                     <p></p>Interested in software and web development, particularly UI/UX and data visualization.<p></p>
                     <p>Currently working in JS, Ruby on Rails, MySQL and R,</p>
                     <p>fluent in Python, Java, JS, R, HTML/CSS/SVG, C.</p>
                 <p></p>I also love <a href="https://open.spotify.com/user/chuntulho?si=4xTKox0MQtWD25IkJnz0HQ">music</a> 
-                and <a href="http://instagram.com/twobirdsonecage">birds</a>, and can play 4 instruments (5 if you include the recorder).
+                and birds, and can play 4 instruments (5 if you include the recorder).
             </div>
             
         </div>
@@ -90,22 +90,22 @@
                     <div id="horizBarPlot" class="d3-half-container"></div>
                     <div id="vertBarPlot" class="d3-half-container"></div>
                     <div id="caption">
-                        <a href="http://github.com/chuntul/d3-plots">Code</a>
+                        <a href="http://github.com/chuntul/d3-barplots">Code</a>
                         Simple bar plots with hover for each bar. 
                     </div>
                     <div id="piePlot" class="d3-container"></div>
                     <div id="caption">
-                        <a href="http://github.com/chuntul/d3-plots">Code</a>
+                        <a href="http://github.com/chuntul/d3-donut">Code</a>
                         A donut plot with a legend. 
                     </div>
                     <div id="waterfallPlot" class="d3-container"></div>
                     <div id="caption">
-                        <a href="http://github.com/chuntul/d3-plots">Code</a>
+                        <a href="http://github.com/chuntul/d3-waterfall">Code</a>
                         A waterfall plot, sorted by decreasing number.
                     </div>
                     <div id="venn" class="d3-container"></div>
                     <div id="caption">
-                        <a href="http://github.com/chuntul/d3-plots">Code</a>
+                        <a href="http://github.com/chuntul/d3-upset">Code</a>
                         An UpSet plot, sorted by decreasing number.
                     </div>
                     <script>
@@ -133,7 +133,7 @@
                                         ["a","i", "j","c","d"],
                                         // ["a","c","d", "e", "f", "n"]
                                     ]
-                        makeVenn(sets,items)
+                        makeUpset(sets,items)
                     </script>
                 </div>
          

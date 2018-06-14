@@ -104,7 +104,7 @@ function makeHorizBarPlot(names, nums) {
         .attr({
           'x':-1,
           'y':function(d,i){ 
-            // d refers to nums, on line 98 where I set data to nums
+            // d refers to nums
             // i refers to each item in nums
             return yrange(i)-10; 
           }
@@ -127,17 +127,17 @@ function makeHorizBarPlot(names, nums) {
           }
         })
 
-  		
-        for (var i = 1; i < nums.length; i++) {
-          svg.append("text")
-            .attr({'x': xrange(nums[i]) + 5, 'y': yrange(i)+5})
-            .attr("id", names[i] + "num")
-            .style("text-anchor", "start")
-            .style("font-size", "13px")
-            .attr("fill", "black")
-            .style("opacity", 0)
-            .text(nums[i])
-          }
+  // appending text on hover		
+  for (var i = 1; i < nums.length; i++) {
+    svg.append("text")
+      .attr({'x': xrange(nums[i]) + 5, 'y': yrange(i)+5})
+      .attr("id", names[i] + "num")
+      .style("text-anchor", "start")
+      .style("font-size", "13px")
+      .attr("fill", "black")
+      .style("opacity", 0)
+      .text(nums[i])
+  }
 
 }
 
@@ -152,9 +152,6 @@ function makeVertBarPlot(names, nums) {
   var width = 250;
   var height = 250;
   var color = d3.scale.category10();
-
-
-
 
   //calculating max for data
   var maxNum = Math.max.apply(null, nums)
@@ -181,7 +178,6 @@ function makeVertBarPlot(names, nums) {
     .orient("left")
     .tickSize(5)
     .tickFormat(d3.format("s"));
-
 
   // Add the svg canvas
   var svg = d3.select("#vertBarPlot")
@@ -267,8 +263,7 @@ function makeVertBarPlot(names, nums) {
           }
         })
 
-  // for some reason i can't append text onto the end of the bars
-  // and so i must do it here
+  // appending text on hover
   for (var i = 1; i < nums.length; i++) {
     svg.append("text")
       .attr({'x': xrange(i), 'y': yrange(nums[i])-10})
