@@ -43,7 +43,7 @@ background: #000;
 }
 
 .section:nth-child(3) {
-    background:rgb(255, 182, 182);
+    background:rgb(250, 144, 144);
 }
 
 .section:nth-child(4) {
@@ -223,7 +223,7 @@ img {
     text-decoration:none;
     background:black;
     border:1px solid black;
-    padding:0px 5px;
+    padding:5px 5px 0px 5px;
     margin-right:10px;
     color:white;
     text-transform: uppercase;
