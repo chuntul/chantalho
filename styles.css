@@ -42,34 +42,34 @@ background: #000;
     font-family:'Abel', sans-serif;
 }
 
-.section:nth-child(3) {
-    background:rgb(250, 144, 144);
+.section:nth-child(even) {
+    background:rgb(218, 217, 217);
 }
 
-.section:nth-child(4) {
-    background:rgb(252, 213, 108);
+.section:nth-child(odd) {
+    background:rgb(218, 217, 217);
 }
 
-.section:nth-child(5) {
-    background:rgb(158, 193, 241);
+/* .section:nth-child(5) {
+    background:rgb(241, 202, 92);
 }
 
 .section:nth-child(6) {
-    background:rgb(240, 179, 109);
-}
+    background:rgb(233, 159, 75);
+} */
 
 
 .section h1 {
     font-family: Arial;
     font-size:60px;
     margin-left:10%;
-    color:white;
+    color:black;
 }
 
 
 img {
     width: 40vw;
-    border: 2px solid white;
+    border: 1px solid black;
     opacity:0.9;
     padding:5px;
     float:left;
@@ -80,10 +80,23 @@ img {
     margin-top:10vh;
     width:80%;
     margin-left:10%;
-    font-size:20px;
+    font-size: 16px;
     line-height:30px;
     display:inline-block;
-    font-family:'Tajawal', sans-serif;
+    font-family:Arial; 
+}
+
+.description a {
+    text-decoration:none;
+    border-bottom: 1px solid black;
+    padding-bottom: 1px;
+    transition: .3s ease-out;
+}
+
+.description a:hover {
+    color:black;
+    border-bottom: 1px solid black;
+    transition: .3s ease-out;
 }
 
 #exp-pharmacodb h1 {
@@ -95,51 +108,39 @@ img {
 }
 
 #about .description {
-    color:white;
+    color:black;
 }
 
 #about .description a {
-    color:white;
-    border-bottom:1px solid white;
+    color:black;
+    border-bottom:1px solid black;
 }
 #exp-ePlant .description {
-    color:white;
+    color:black;
 }
 
 #exp-ePlant .description a {
-    color:white;
-    border-bottom:1px solid white;
+    color:black;
+    border-bottom:1px solid black;
 }
 
 #exp-pharmacodb .description img {
     border:2px solid black;
 }
 
-.description a {
-    text-decoration:none;
-    border-bottom: 1px solid black;
-    padding-bottom: 1px;
-    text-transform: uppercase;
-    font-size:20px;
-    transition: .3s ease-out;
-}
-
-.description a:hover {
-    color:black;
-    border-bottom: 1px solid black;
-    transition: .3s ease-out;
-}
 
 #about .description img {
     width:200px;
     height:200px;
-    border: 2px solid white;
+    border: 1px solid black;
+    /* filter: grayscale(10%); */
     padding:5px;
     margin-left:100px;
     margin-right:20px;
     margin-top: 20px;
-    border-radius:50%;
+    /* border-radius:50%; */
     float:left;
+    opacity:1;
 }
 
 #sidelinks {
@@ -157,20 +158,20 @@ img {
     margin:0px 0px 30px 0px;
     padding:0px;
     text-align:right;
-    text-transform:lowercase;
-    font-size:15px;
+    text-transform:uppercase;
+    font-size:11px;
     font-family:Arial;
     transition: border .3s ease-out;
     
 }
 
 #sidelinks a:hover {
-    border-bottom:2px solid black;
+    border-bottom:1px solid black;
     transition: border .3s ease-out;
 }
 
 .active {
-    border-bottom:2px solid black;
+    border-bottom:1px solid black;
     transition: border .3s ease-out;
 }
 
@@ -257,11 +258,11 @@ img {
 }
 
 #footer a {
-    font-size:18px;
-    font-family:'Abel', sans-serif;
+    font-size:11px;
+    font-family:Arial;
     margin:0px 50px;
     text-decoration:none;
-    text-transform:lowercase;
+    text-transform:uppercase;
     color:#000;
     border-bottom:1px solid white;
     transition: border .3s ease-out;
