@@ -10,7 +10,7 @@
         <script src="node_modules/jquery-scrollify/jquery.scrollify.js"></script>
         <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <link href="https://fonts.googleapis.com/css?family=Abel|Quicksand|Tajawal" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Chivo" rel="stylesheet">
         <script>
             $(function() {
                 $.scrollify({
@@ -24,11 +24,19 @@
            
 
         <div id="sidelinks">
-            <a href="#about" class="active">About</a>
+            <a href="#intro">Intro</a>
+            <a href="#about">About</a>
             <a href="#exp-pharmacodb">PharmacoDB</a>
             <a href="#exp-ePlant">ePlant</a>
             <a href="#projects-d3">d3 Plots</a>
-            
+        </div>
+
+        <div id="sidelink-dot">
+            <a href="#intro" class="active"></a>
+            <a href="#about"></a>
+            <a href="#exp-pharmacodb"></a>
+            <a href="#exp-ePlant"></a>
+            <a href="#projects-d3"></a>
         </div>
         <div id="footer">
             <a href="http://github.com/chuntul">Github</a>
@@ -37,16 +45,29 @@
             <a href="mailto:chantalc.ho@mail.utoronto.ca">Email: chantalc.ho@mail.utoronto.ca</a>
         </div>
 
-        <div id="about" class="section">
-            <h1>Hi, I'm Chantal Ho.</h1>
+        <div id="intro" class="section">
+            <h1>Hi, I'm Chantal.</h1>
             <div class="description">
-                <img src="me.jpg"><p></p>
-                4th year undergraduate bioinformatics student at the University of Toronto.
-                    <p></p>Interested in software and web development, particularly UI/UX and data visualization.<p></p>
-                    <p>Currently working in JS, d3.js, Ruby on Rails, MySQL and R,</p>
-                    <p>fluent in Python, Java, JS, R, HTML/CSS/SVG, C.</p>
-                <p></p>I also love <a href="https://open.spotify.com/user/chuntulho?si=4xTKox0MQtWD25IkJnz0HQ">music</a> 
-                and birds, and can play 4 instruments (5 if you include the recorder).
+                <span style="font-size:30px;">4th year bioinformatics student at the University of Toronto. </span>
+                <p>Interested in a <span style="color:rgb(21, 55, 83); ">developer position</span> starting Summer 2019.</p>
+            </div>
+            
+        </div>
+
+        <div id="about" class="section">
+            <h1>Here's a bit about me.</h1>
+            <div class="description">
+                I'm currently doing research in Dr. Jüri Reimand's lab on cancer driver genes.
+                <br>I'm passionate about <span style="color:rgb(21, 55, 83);  ">data visualization</span> and <span style="color:rgb(21, 55, 83); ">UI/UX design</span>.
+                <br>I also love <a href="https://open.spotify.com/user/chuntulho?si=4xTKox0MQtWD25IkJnz0HQ">music</a> , my <a href="http://instagram.com/twobirdsonecage">birds</a> , 
+                    and a good book. <br>
+            </div>
+            <h1 style="font-size: 27px;font-family: Arial; margin-left:190px;">Languages and tools I can use:</h1>
+            <div class="description" style="margin-top:2vh">
+                    <span style="color:rgb(21, 55, 83); ">Front-end:</span> JS (d3.js), HTML/CSS
+                <br><span style="color:rgb(21, 55, 83); ">Backend:</span> Ruby on Rails, Python, NodeJS
+                <br><span style="color:rgb(21, 55, 83); ">Tools:</span> Photoshop, Illustrator, Github
+
             </div>
             
         </div>
@@ -55,14 +76,8 @@
             <h1>PharmacoDB</h1>
             <div class="description">
                 <img src="pharmacodb.PNG">
-                I was a developer for <a href="http://pharmacodb.pmgenomics.ca">PharmacoDB</a> , a web application assembling the largest drug screens into a single database.
-                 For more information, visit <a href="https://pharmacodb.pmgenomics.ca/about">here</a>.
-                <p>In particular, I created all the data visualizations using <b>d3.js</b>, and helped 
-                    design/develop various parts of the UI in <b>Ruby on Rails</b>.</p>
-                <p> I also helped maintain the database in <b>MySQL</b>, as well as its corresponding API in collaboration with
-                    <a href="http://www.cbioportal.org/">cBioPortal</a>.
-                </p> <p>
-                PharmacoDB is <a href="https://academic.oup.com/nar/article/doi/10.1093/nar/gkx911/4372597/PharmacoDB-an-integrative-database-for-mining-in">published</a> in Nucleic Acids Research. </p>
+                <a href="http://pharmacodb.ca">PharmacoDB </a>: a web application assembling the largest drug screens into a single database.
+                 
             </div>
             
         </div>

@@ -25,11 +25,11 @@ $(document).ready(function () {
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
-    $('#sidelinks a').each(function () {
+    $('#sidelink-dot a').each(function () {
         var currLink = $(this);
         var refElement = $(this.hash); 
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('#sidelinks a').removeClass("active");
+            $('#sidelink-dot a').removeClass("active");
             currLink.addClass("active");
         }
         else{

@@ -1,15 +1,11 @@
 html, body {
-    background:white;
-    color:black;
+    color:white;
     font-family: Arial;
     margin:0px;
     max-width: 100%;
     overflow-x: hidden;
 }
 
-a {
-    color:black;
-}
 
 ::-webkit-scrollbar {
     height: 0px;
@@ -40,15 +36,17 @@ background: #000;
     font-size:20px;
     line-height:25px;
     font-family:'Abel', sans-serif;
+    background:#e79863;
+    /* background-image: linear-gradient(#e88263,#f5b7a3); */
 }
 
-.section:nth-child(even) {
-    background:rgb(218, 217, 217);
+/* .section:nth-child(even) {
+    background-image: linear-gradient(#f7e0d8,#e88263);
 }
 
 .section:nth-child(odd) {
-    background:rgb(218, 217, 217);
-}
+    background-image: linear-gradient(#e88263,#f7e0d8);
+} */
 
 /* .section:nth-child(5) {
     background:rgb(241, 202, 92);
@@ -63,7 +61,7 @@ background: #000;
     font-family: Arial;
     font-size:60px;
     margin-left:10%;
-    color:black;
+    color:white;
 }
 
 
@@ -77,50 +75,49 @@ img {
 }
 
 .description {
-    margin-top:10vh;
     width:80%;
-    margin-left:10%;
-    font-size: 16px;
+    margin-left:145px;
+    font-size: 20px;
     line-height:30px;
     display:inline-block;
-    font-family:Arial; 
+    font-family:'Chivo', sans-serif; 
 }
 
 .description a {
     text-decoration:none;
-    border-bottom: 1px solid black;
-    padding-bottom: 1px;
+    color:rgb(21, 55, 83);
+    border-bottom: 1px solid rgb(21, 55, 83); ;
+    padding-bottom: 0px;
     transition: .3s ease-out;
 }
 
 .description a:hover {
-    color:black;
-    border-bottom: 1px solid black;
+    color:#496C89;
+    border-bottom: 1px solid #496C89;
     transition: .3s ease-out;
 }
 
-#exp-pharmacodb h1 {
-    color:black;
+#intro .description {
+    font-size:25px;
+    margin-top:10vh;
+    margin-left:200px;
+    border-left:5px solid white;
+    padding: 20px 30px 0px 30px;
 }
-
-#projects-d3 h1 {
-    color:black;
+#intro .description a {
+    border-bottom:1px solid black;
 }
 
 #about .description {
-    color:black;
-}
-
-#about .description a {
-    color:black;
-    border-bottom:1px solid black;
-}
-#exp-ePlant .description {
-    color:black;
+    margin-top:5vh;
+    margin-bottom:20px;
+    margin-left:200px;
+    border-left:5px solid white;
+    padding: 0px 30px 0px 30px;
+    line-height:35px;
 }
 
 #exp-ePlant .description a {
-    color:black;
     border-bottom:1px solid black;
 }
 
@@ -128,51 +125,65 @@ img {
     border:2px solid black;
 }
 
-
-#about .description img {
-    width:200px;
-    height:200px;
-    border: 1px solid black;
-    /* filter: grayscale(10%); */
-    padding:5px;
-    margin-left:100px;
-    margin-right:20px;
-    margin-top: 20px;
-    /* border-radius:50%; */
-    float:left;
-    opacity:1;
-}
-
 #sidelinks {
-    height:100%;
-    top:0;
-    padding:30px 0px 30px 30px;
+    margin-top:32px;
+    height:133px;
+    padding:0px 10px 0px 30px;
     position:fixed;
-   
+    color:white;
+    /* border-right:1px solid white; */
 }
 
 #sidelinks a {
-    color:black;
     text-decoration:none;
+    color:white;
     display:block;
-    margin:0px 0px 30px 0px;
+    margin:-2px 0px 22px 0px;
     padding:0px;
     text-align:right;
     text-transform:uppercase;
     font-size:11px;
+    font-weight:bold;
     font-family:Arial;
     transition: border .3s ease-out;
     
 }
 
 #sidelinks a:hover {
-    border-bottom:1px solid black;
-    transition: border .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+#sidelink-dot {
+    height:100%;
+    top:0;
+    margin-left:86px;
+    margin-top: 1px;
+    padding:30px 0px 30px 30px;
+    position:fixed;
+    color:white;
+}
+
+#sidelink-dot a {
+    width:8px;
+    height:8px;
+    margin:0px 0px 22px 0px;
+    padding:0px;
+    display:block;
+    border-radius:50%;
+    background:#e88263;
+    border:1px solid white;
+    transition: all .3s ease-out;
+}
+
+#sidelink-dot a:hover {
+    background:white;
+    transition: all .3s ease-out;
 }
 
 .active {
-    border-bottom:1px solid black;
-    transition: border .3s ease-out;
+    background:white !important;
+    border:1px solid white !important;
+    transition: all .3s ease-out;
 }
 
 #plot-container {
@@ -245,32 +256,31 @@ img {
     bottom:0px;
     width:100%;
     height:40px;
-    background:white;
-    opacity:0.9;
     text-align:center;
     padding-top:20px;
-    transition: .3s ease-out;
+
 }
 
-#footer:hover {
-    opacity:0.8;
-    transition: .3s ease-out;
-}
+
 
 #footer a {
-    font-size:11px;
+    font-size:14px;
+    font-weight:bold;
     font-family:Arial;
     margin:0px 50px;
+    letter-spacing:1px;
     text-decoration:none;
     text-transform:uppercase;
-    color:#000;
-    border-bottom:1px solid white;
-    transition: border .3s ease-out;
+    color:#496C89;
+    padding-bottom:2px;
+    border-bottom:1px solid #496C89;
+    transition: all .3s ease-out;
 }
 
 #footer a:hover {
-    border-bottom:1px solid #000;
-    transition: border .3s ease-out;
+    color:white;
+    border-bottom:1px solid rgb(161, 192, 219);
+    transition: all .3s ease-out;
 }
 
 
