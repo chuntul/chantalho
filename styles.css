@@ -2,8 +2,10 @@ html, body {
     color:white;
     font-family:'Chivo', sans-serif;
     margin:0px;
+    margin-left:2%;
     max-width: 100%;
     overflow-x: hidden;
+    background:#e79863;
 }
 
 
@@ -60,7 +62,7 @@ background: #000;
 .section h1 {
     font-family: Arial;
     font-size:60px;
-    margin-left:10%;
+    margin-left:150px;
     color:white;
 }
 
@@ -82,6 +84,10 @@ img {
     margin-right:20px;
 }
 
+.highlight {
+    color:rgb(31, 80, 119) !important;
+}
+
 .description {
     width:80%;
     margin-left:170px;
@@ -93,8 +99,8 @@ img {
 
 .description a {
     text-decoration:none;
-    color:rgb(21, 55, 83);
-    border-bottom: 1px solid rgb(21, 55, 83) ;
+    color: rgb(31, 80, 119);
+    border-bottom: 1px solid rgb(31, 80, 119) ;
     padding-bottom: 0px;
     transition: .3s ease-out;
 }
@@ -106,8 +112,8 @@ img {
 }
 
 #intro .description {
-    font-size:25px;
-    margin-top:10vh;
+    font-size:26px;
+    margin-top:50px;
     border-left:5px solid white;
     padding: 20px 30px 0px 30px;
 }
@@ -133,7 +139,8 @@ img {
 }
 
 #experiences .description {
-    font-size:17px;
+    font-size:19px;
+    line-height:38px;
     border-left:5px solid white;
     padding: 0px 30px 10px 20px;
 }
@@ -154,8 +161,8 @@ img {
 }
 
 #sidelinks {
-    margin-top:32px;
     height:133px;
+    margin-top:160px;
     padding:0px 10px 0px 30px;
     position:fixed;
     color:white;
@@ -185,7 +192,7 @@ img {
     height:100%;
     top:0;
     margin-left:86px;
-    margin-top: 1px;
+    margin-top:130px;
     padding:30px 0px 30px 30px;
     position:fixed;
     color:white;
@@ -217,7 +224,7 @@ img {
 #plot-container {
     width:500px;
     height:500px;
-    margin-left:20%;
+    margin-left:300px;
     margin-top: 10vh;
     white-space:nowrap;
     display: inline-block;
@@ -287,6 +294,7 @@ img {
     text-align:center;
     padding-top:20px;
     background:#e79863;
+    z-index:99999;
 }
 
 
