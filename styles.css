@@ -1,6 +1,6 @@
 html, body {
     color:white;
-    font-family: Arial;
+    font-family:'Chivo', sans-serif;
     margin:0px;
     max-width: 100%;
     overflow-x: hidden;
@@ -64,10 +64,18 @@ background: #000;
     color:white;
 }
 
+h2 {
+    font-size: 27px;
+    font-family: Arial; 
+    margin-left:160px;
+}
+
+h2 a {
+    color:white;
+}
 
 img {
-    width: 40vw;
-    border: 1px solid black;
+    width: 220px;
     opacity:0.9;
     padding:5px;
     float:left;
@@ -76,7 +84,7 @@ img {
 
 .description {
     width:80%;
-    margin-left:145px;
+    margin-left:170px;
     font-size: 20px;
     line-height:30px;
     display:inline-block;
@@ -86,7 +94,7 @@ img {
 .description a {
     text-decoration:none;
     color:rgb(21, 55, 83);
-    border-bottom: 1px solid rgb(21, 55, 83); ;
+    border-bottom: 1px solid rgb(21, 55, 83) ;
     padding-bottom: 0px;
     transition: .3s ease-out;
 }
@@ -100,7 +108,6 @@ img {
 #intro .description {
     font-size:25px;
     margin-top:10vh;
-    margin-left:200px;
     border-left:5px solid white;
     padding: 20px 30px 0px 30px;
 }
@@ -108,21 +115,42 @@ img {
     border-bottom:1px solid black;
 }
 
+#intro img {
+    width:70px;
+    display:inline-block;
+    position:absolute;
+    margin-top:-35px;
+    float:none;
+    opacity:1;
+}
+
 #about .description {
     margin-top:5vh;
     margin-bottom:20px;
-    margin-left:200px;
     border-left:5px solid white;
     padding: 0px 30px 0px 30px;
     line-height:35px;
 }
 
-#exp-ePlant .description a {
-    border-bottom:1px solid black;
+#experiences .description {
+    font-size:17px;
+    border-left:5px solid white;
+    padding: 0px 30px 10px 20px;
 }
 
-#exp-pharmacodb .description img {
-    border:2px solid black;
+#experiences .description a {
+    font-size:16px;
+    background:white;
+    color:#e79863;
+    border:1px solid white;
+    padding:1px 3px;
+}
+
+#experiences .description a:hover {
+    background:#e79863;
+    color:white;
+    padding:1px 3px;
+    border:1px solid white;
 }
 
 #sidelinks {
@@ -197,9 +225,9 @@ img {
 }
 
 .d3-container, .d3-half-container {
-    font-family: Arial;
     background:white;
     border:2px solid black;
+    font-family:'Chivo', sans-serif;
     padding:4px;
     margin-right:5%;
     margin-top:20px;
@@ -226,27 +254,27 @@ img {
 }
 
 #caption {
-    font-family:'Tajawal', sans-serif;
     margin-top:20px;
     width:500px;
+    font-family:'Chivo', sans-serif;
 }
 
 #caption a {
     text-decoration:none;
-    background:black;
-    border:1px solid black;
-    padding:5px 5px 0px 5px;
+    background:white;
+    border:1px solid white;
+    padding:5px 5px 3px 5px;
     margin-right:10px;
-    color:white;
-    text-transform: uppercase;
+    color:#e79863;
+    text-transform: lowercase;
     font-size:18px;
     transition: .3s ease-out;
 }
 
 #caption a:hover {
-    color:black;
-    background:white;
-    border:1px solid black;
+    color:white;
+    background:#e79863;
+    border:1px solid white;
     transition: .3s ease-out;
 }
 
@@ -279,7 +307,7 @@ img {
 
 #footer a:hover {
     color:white;
-    border-bottom:1px solid rgb(161, 192, 219);
+    border-bottom:1px solid white;
     transition: all .3s ease-out;
 }
 

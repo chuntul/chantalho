@@ -36,4 +36,15 @@ function onScroll(event){
             currLink.removeClass("active");
         }
     });
+    $('#sidelink a').each(function () {
+        var currLink = $(this);
+        var refElement = $(this.hash); 
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#sidelink a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
 }
