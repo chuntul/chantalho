@@ -61,13 +61,13 @@ background: #000;
 
 .section h1 {
     font-family: Arial;
-    font-size:60px;
+    font-size:10vh;
     margin-left:150px;
     color:white;
 }
 
 h2 {
-    font-size: 27px;
+    font-size: 5vh;
     font-family: Arial; 
     margin-left:160px;
 }
@@ -91,7 +91,6 @@ img {
 .description {
     width:80%;
     margin-left:170px;
-    font-size: 20px;
     line-height:30px;
     display:inline-block;
     font-family:'Chivo', sans-serif; 
@@ -112,20 +111,29 @@ img {
 }
 
 #intro .description {
-    font-size:26px;
-    margin-top:50px;
+    font-size:3.5vh;
+    margin-top:3vh;
     border-left:5px solid white;
     padding: 20px 30px 0px 30px;
 }
+
+.bigger {
+    font-size:4.5vh;
+}
+
+.smaller {
+    font-size:3vh;
+}
+
 #intro .description a {
     border-bottom:1px solid black;
 }
 
 #intro img {
-    width:70px;
+    width:13vh;
     display:inline-block;
-    position:absolute;
-    margin-top:-35px;
+    position:static;
+    vertical-align: text-bottom;
     float:none;
     opacity:1;
 }
@@ -133,20 +141,21 @@ img {
 #about .description {
     margin-top:5vh;
     margin-bottom:20px;
+    font-size:3vh;
     border-left:5px solid white;
     padding: 0px 30px 0px 30px;
-    line-height:35px;
+    line-height:6vh;
 }
 
 #experiences .description {
-    font-size:19px;
-    line-height:38px;
+    font-size:2.7vh;
+    line-height:5vh;
     border-left:5px solid white;
     padding: 0px 30px 10px 20px;
 }
 
 #experiences .description a {
-    font-size:16px;
+    font-size:2.3vh;
     background:white;
     color:#e79863;
     border:1px solid white;
@@ -158,6 +167,10 @@ img {
     color:white;
     padding:1px 3px;
     border:1px solid white;
+}
+
+#experiences h2 {
+    padding-top:4vh;
 }
 
 #sidelinks {
