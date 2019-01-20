@@ -4,7 +4,7 @@ html, body {
     margin:0px;
     margin-left:2%;
     max-width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background:#e79863;
 }
 
