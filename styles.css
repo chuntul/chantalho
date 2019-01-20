@@ -31,7 +31,7 @@ background: #000;
 }
     
 .section {
-    width:100%;
+    width:85vw;
     height:100vh;
     margin:0px;
     padding:50px;
@@ -142,7 +142,7 @@ img {
 #about .description {
     margin-top:2.8vh;
     margin-bottom:20px;
-    font-size:3vh;
+    font-size:2.8vh;
     border-left:5px solid white;
     padding: 0px 30px 0px 30px;
     line-height:6vh;
