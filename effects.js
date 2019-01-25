@@ -2,14 +2,14 @@ $(document).ready(function () {
     $(document).on("scroll", onScroll);
     
     //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
+    $('a[href^="#"]').on('click', function (e) { //
         e.preventDefault();
         $(document).off("scroll");
         
-        $('a').each(function () {
+        $('a .dot').each(function () {
             $(this).removeClass('active');
         })
-        $(this).addClass('active');
+        // $(this).addClass('active');
       
         var target = this.hash,
             menu = target;
@@ -40,11 +40,12 @@ function onScroll(event){
         var currLink = $(this);
         var refElement = $(this.hash); 
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('#sidelink a').removeClass("active");
-            currLink.addClass("active");
+            // $('#sidelink a').removeClass("active");
+            // currLink.addClass("active");
         }
         else{
-            currLink.removeClass("active");
+            // currLink.removeClass("active");
         }
     });
+    
 }
