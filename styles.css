@@ -238,7 +238,6 @@ img {
 
 #plot-container {
     width:500px;
-    height:500px;
     margin-left:220px;
     margin-top: 10vh;
     white-space:nowrap;
@@ -273,6 +272,7 @@ img {
 
 #projects-d3 {
     padding-bottom:100px;
+    height:100%;
 }
 
 #caption {
